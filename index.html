@@ -1,33 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
   <title>Полис ипотечного страхования</title>
 </head>
 <body>
-  <h1>Заполнение полиса ипотечного страхования</h1>
-  <form action="/submit-policy" method="post">
-    <label for="name">Имя заемщика:</label>
-    <input type="text" id="name" name="name" required>
-    <br>
-    <label for="surname">Фамилия заемщика:</label>
-    <input type="text" id="surname" name="surname" required>
-    <br>
-    <label for="patronymic">Отчество заемщика:</label>
-    <input type="text" id="patronymic" name="patronymic">
-    <br>
-    <label for="birthdate">Дата рождения заемщика:</label>
-    <input type="date" id="birthdate" name="birthdate" required>
-    <br>
-    <label for="policy_number">Номер полиса:</label>
-    <input type="text" id="policy_number" name="policy_number" required>
-    <br>
-    <label for="policy_amount">Сумма страхования:</label>
-    <input type="number" id="policy_amount" name="policy_amount" required>
-    <br>
-    <label for="term">Срок страхования:</label>
-    <input type="number" id="term" name="term" required>
-    <br>
+  <h1>Полис ипотечного страхования</h1>
+  <form>
+    <label for="remaining-mortgage-amount">Оставшаяся сумма ипотеки:</label>
+    <input type="number" id="remaining-mortgage-amount">
+
+    <label for="property-type">Тип жилья:</label>
+    <select id="property-type">
+      <option value="apartment">Квартира</option>
+      <option value="house">Дом</option>
+    </select>
+
+    <label for="gender">Пол страхователя:</label>
+    <select id="gender">
+      <option value="male">Мужчина</option>
+      <option value="female">Женщина</option>
+    </select>
+
     <input type="submit" value="Заполнить">
   </form>
 </body>
