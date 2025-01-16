@@ -2,11 +2,22 @@ const form = document.querySelector('form');
 
 form.addEventListener('submit', (event) => {
   event.preventDefault();
-
-  const remainingMortgageAmount = document.querySelector('#remaining-mortgage-amount').value;
-  const propertyType = document.querySelector('#property-type').value;
+  
+  const name = document.querySelector('#name').value;
+  const passport = document.querySelector('#passport').value;
+  const address = document.querySelector('#address').value;
+  const mortgage = document.querySelector('#mortgage').value;
+  const type = document.querySelector('#type').value;
   const gender = document.querySelector('#gender').value;
-
-  // Здесь можно сохранить данные на сервер или выполнить другие действия с введенной информацией.
-  console.log({ remainingMortgageAmount, propertyType, gender });
+  
+  const policyData = {
+    name,
+    passport,
+    address,
+    mortgage,
+    type,
+    gender
+  };
+  
+  // Отправка данных на сервер или сохранение в локальном хранилище
 });
