@@ -1,28 +1,42 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Онлайн-калькулятор страхования ипотеки</title>
-</head>
-<body>
-  <h1>Онлайн-калькулятор страхования ипотеки</h1>
-  <form>
-    <label for="loan_amount">Сумма кредита:</label>
-    <input type="number" id="loan_amount">
+const calculatePremium = (loanAmount, age, gender) => {
+  let premium = 0;
+  if (age < 30) {
+    premium = loanAmount * 0.01;
+  } else if (age < 40) {
+    premium = loanAmount * 0.012;
+  } else if (age < 50) {
+    premium = loanAmount * 0.014;
+  } else {
+    premium = loanAmount * 0.016;
+  }
 
-    <label for="loan_term">Срок кредита (в месяцах):</label>
-    <input type="number" id="loan_term">
+  if (gender === 'female') {
+    premium *= 0.95;
+  }
 
-    <label for="age">Ваш возраст:</label>
-    <input type="number" id="age">
+  return premium;
+};
 
-    <label for="gender">Ваш пол:</label>
-    <select id="gender">
-      <option value="male">Мужской</option>
-      <option value="female">Женский</option>
-    </select>
+const calculateMonthlyPayment = (premium, loanTerm) => {
+  return premium / loanTerm;
+};
 
-    <input type="submit" value="Рассчитать">
-  </form>
-  <div id="result"></div>
-</body>
-</html>
+const form = document.querySelector('form');
+
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+
+  const loanAmount = parseInt(document.querySelector('#loan_amount').value);
+  const loanTerm = parseInt(document.querySelector('#loan_term').value);
+  const age = parseInt(document.querySelector('#age').value);
+  const gender = document.querySelector('#gender').value;
+
+  const premium = calculatePremium(loanAmount, age, gender);
+  const monthlyPayment = calculateMonthlyPayment(premium, loanTerm);
+
+  // Вывод результата
+  document.querySelector('#result').innerHTML = Ⓝ
+    <p>Страховая премия: ${premium.toFixed(2)} руб.</p>
+    <p>Ежемесячный платеж: ${monthlyPayment.toFixed(2)} руб.</p>
+  Ⓝ;
+});
