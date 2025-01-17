@@ -1,36 +1,15 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Заполнение полиса ипотечного страхования</title>
-</head>
-<body>
-  <h1>Заполнение полиса ипотечного страхования</h1>
-  <form>
-    <label for="name">ФИО:</label>
-    <input type="text" id="name">
-    
-    <label for="passport">Паспортные данные:</label>
-    <input type="text" id="passport">
-    
-    <label for="address">Адрес объекта:</label>
-    <input type="text" id="address">
-    
-    <label for="mortgage">Оставшаяся сумма ипотеки:</label>
-    <input type="number" id="mortgage">
-    
-    <label for="type">Тип жилья:</label>
-    <select id="type">
-      <option value="квартира">Квартира</option>
-      <option value="дом">Дом</option>
-    </select>
-    
-    <label for="gender">Пол страхователя:</label>
-    <select id="gender">
-      <option value="мужчина">Мужчина</option>
-      <option value="женщина">Женщина</option>
-    </select>
-    
-    <button type="submit">Отправить</button>
-  </form>
-</body>
-</html>
+<div id="insurance-calculator">
+  <h2>Калькулятор расчета страховой суммы</h2>
+  <div>
+    <label for="remaining-mortgage-sum">Оставшаяся сумма кредита</label>
+    <input type="number" id="remaining-mortgage-sum">
+  </div>
+  <div>
+    <label for="term-repayment">Срок погашения кредита</label>
+    <input type="number" id="term-repayment">
+  </div>
+  <div>
+    <button type="button" id="calculate-button">Рассчитать</button>
+  </div>
+  <div id="insurance-sum-result"></div>
+</div>
