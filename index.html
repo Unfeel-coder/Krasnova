@@ -1,78 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <title>Полис ипотечного страхования</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <h1>Заполнение полиса ипотечного страхования</h1>
-  <form id="form">
-    <div>
-      <label for="name">ФИО</label>
-      <input type="text" id="name" name="name" required>
-    </div>
-    <div>
-      <h2>Паспортные данные</h2>
-      <div>
-        <label for="passportSeries">Серия</label>
-        <input type="text" id="passportSeries" name="passportSeries" required>
-      </div>
-      <div>
-        <label for="passportNumber">Номер</label>
-        <input type="text" id="passportNumber" name="passportNumber" required>
-      </div>
-      <div>
-        <label for="passportIssuedBy">Кем выдан</label>
-        <input type="text" id="passportIssuedBy" name="passportIssuedBy" required>
-      </div>
-      <div>
-        <label for="passportIssuedDate">Когда выдан</label>
-        <input type="date" id="passportIssuedDate" name="passportIssuedDate" required>
-      </div>
-    </div>
-    <div>
-      <label for="birthDate">Дата рождения</label>
-      <input type="date" id="birthDate" name="birthDate" required>
-    </div>
-    <div>
-      <label for="address">Адрес объекта</label>
-      <input type="text" id="address" name="address" required>
-    </div>
-    <div>
-      <label for="remainingMortgageSum">Оставшаяся сумма ипотеки</label>
-      <input type="number" id="remainingMortgageSum" name="remainingMortgageSum" required>
-    </div>
-    <div>
-      <label for="termRepayment">Оставшийся срок кредита</label>
-      <input type="number" id="termRepayment" name="termRepayment" required>
-    </div>
-    <div>
-      <label for="housingType">Тип жилья</label>
-      <select id="housingType" name="housingType" required>
-        <option value="apartment">Квартира</option>
-        <option value="house">Дом</option>
-      </select>
-    </div>
-    <div>
-      <label for="cadastralNumber">Кадастровый номер</label>
-      <input type="text" id="cadastralNumber" name="cadastralNumber" required>
-    </div>
-    <div>
-      <label for="gender">Пол страхователя</label>
-      <select id="gender" name="gender" required>
-        <option value="male">Мужчина</option>
-        <option value="female">Женщина</option>
-      </select>
-        <div>
-      <button type="submit" id="submit-button">Подпись</button>
-    </div>
-  </form>
-    </div>
-    <h2 id="calculation">Расчет суммы страхования</h2>
-<!DOCTYPE html>
-<html>
-<head>
   <title>Калькулятор страховой суммы</title>
 </head>
 <body>
@@ -128,29 +56,9 @@
 
         // Выводим результат
         document.querySelector("#result").innerHTML = "Страховая премия: " + insurancePremium.toFixed(2) + " рублей";
+
       });
     });
   </script>
-</body>
-</html>
-
-<html>
-<head>
-  <title>Сообщите нам о страховом случае</title>
-</head>
-<body>
-  <h1>Сообщите нам о страховом случае</h1>
-  <form>
-    <label for="name">ФИО:</label>
-    <input type="text" id="name">
-    <br>
-    <label for="phone">Телефон для обратной связи:</label>
-    <input type="tel" id="phone">
-    <br>
-    <label for="policy_number">Номер полиса:</label>
-    <input type="number" id="policy_number">
-    <br>
-    <input type="submit" value="Отправить">
-  </form>
 </body>
 </html>
